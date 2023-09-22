@@ -11,7 +11,6 @@ The API was made using **python 3.11**.
 python -m venv env
 cd env/Scripts
 activate
-
 ```
 4. Install the requirements with pip
 ```
