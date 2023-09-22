@@ -31,4 +31,4 @@ df = pd.DataFrame({
     'PRICE': PRICE
 })
 print(df)
-df.to_csv('benchmark_data.csv', index=False)
+df.to_csv('database filler/benchmark_data.csv', index=False)
