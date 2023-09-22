@@ -1,4 +1,4 @@
-# GPU BENCHMARK SCORE API 
+# GPU Benchmark score API
 This API has a database with average benchmark scores for every GPU on the market, it has some endpoints to compare different GPUs and to get the info from the database. 
 
 *It was made as an educational project and as an example of an API made using python*
