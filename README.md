@@ -6,9 +6,16 @@ This API has a database with average benchmark scores for every GPU on the marke
 ## Run the API
 The API was made using **python 3.11**.
 1. Clone the repo anywhere you want
-2. Install the requirements
+2. Create a Virtual Enviroment into your project folder and activate it
+```
+python -m venv env
+cd env/Scripts
+activate
+
+```
+4. Install the requirements with pip
 ```
 pip requirements -r 'requirements.txt
 ```
-3. Work in progress
+5. Work in progress
 
