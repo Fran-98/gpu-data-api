@@ -30,5 +30,6 @@ df = pd.DataFrame({
     'SCORE': SCORE,
     'PRICE': PRICE
 })
+df = df.sort_values(by='SCORE')
 print(df)
-df.to_csv('database filler/benchmark_data.csv', index=False)
+df.to_csv('data/benchmark_data.csv', index=False)

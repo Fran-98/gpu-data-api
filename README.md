@@ -12,7 +12,7 @@ python -m venv env
 cd env/Scripts
 activate
 ```
-4. Install the requirements with pip
+4. Install the requirements via pip and the requirements file
 ```
 pip requirements -r 'requirements.txt
 ```
