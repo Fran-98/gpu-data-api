@@ -16,7 +16,12 @@ activate
 ```
 pip requirements -r 'requirements.txt
 ```
-5. Work in progress
+5. Create a .env file with your environment variables. The required ones are as follows:
+```
+DB_USER
+DB_PASSWORD
+```
+6. Work in progress
 
 ## TO DO
 - [ ] Designate endpoints
