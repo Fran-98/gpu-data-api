@@ -12,9 +12,28 @@ python -m venv env
 cd env/Scripts
 activate
 ```
-4. Install the requirements via pip and the requirements file
+4. Install the requirements with pip
 ```
 pip requirements -r 'requirements.txt
 ```
 5. Work in progress
 
+## TO DO
+- [ ] Designate endpoints
+- [ ] Create and populate DB
+- [ ] Host API
+
+## Endpoints
+- GET `/gpu_info_all` 
+    Returns a json with all the GPUs that are inside the database.
+
+- GET `/gpu_info/{gpu_name}` *gpu_name:str* 
+    Returns a json with the SCORE and PRICE of the GPU.
+    
+- GET `/gpu_compare/{gpu1}&{gpu2}` *gpu1:str*, *gpu2:str* 
+    Returns a json with the comparison of the GPUs.
+
+- GET `/gpu_in_rank/{rank}` *rank:int*
+    Returns a json with the GPU in the rank inserted.
+
+- GET `/`

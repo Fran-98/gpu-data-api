@@ -22,7 +22,7 @@ for i in gpus_elements:
     #print(i.get_attribute('innerHTML'))
     GPU.append(i.find_element(By.XPATH, './/span[@class="prdname"]').text)
     SCORE.append(i.find_element(By.XPATH, './/span[@class="count"]').text)
-    PRICE.append(i.find_element(By.XPATH, './/span[@class="price-neww"]').text)
+    PRICE.append(i.find_element(By.XPATH, './/span[@class="price-neww"]').text.replace('*',''))
     print(f'added {GPU[-1]}, score of {SCORE[-1]}, ${PRICE[-1]}')
 
 df = pd.DataFrame({
@@ -32,4 +32,4 @@ df = pd.DataFrame({
 })
 df = df.sort_values(by='SCORE')
 print(df)
-df.to_csv('data/benchmark_data.csv', index=False)
+df.to_csv('utils/data scrapper/gpu_data.csv', index=False)
