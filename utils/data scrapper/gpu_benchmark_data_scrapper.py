@@ -32,4 +32,4 @@ df = pd.DataFrame({
 })
 df = df.sort_values(by='SCORE')
 print(df)
-df.to_csv('utils/data scrapper/gpu_data.csv', index=False)
+df.to_csv('utils/data scrapper/gpu_benchmark_data.csv', index=False)

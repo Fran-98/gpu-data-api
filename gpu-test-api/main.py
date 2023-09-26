@@ -3,7 +3,7 @@ from models import GPU
 from populate_db import populate_db_from_csv
 
 def run():
-    populate_db_from_csv('utils/data scrapper/gpu_data.csv', db.engine)
+    populate_db_from_csv('utils/data scrapper/gpu_benchmark_data.csv', db.engine)
     pass
 
 if __name__ == '__main__':
