@@ -26,13 +26,13 @@ for i, gpu in gpus.iterrows():
     gpu_elements = driver.find_element(By.ID, 'ajaxresults')
     gpu_scrapped = gpu_elements.find_element(By.XPATH, ".//tbody/tr[1]")
     
-    GPU_CHIP = []
-    RELEASED = []
-    BUS = []
-    MEMORY = []
-    GPU_CLOCK = []
-    MEMORY_CLOCK = []
-    SHADERS_TMUs_ROPs = []
+    #GPU_CHIP = []
+    #RELEASED = []
+    #BUS = []
+    #MEMORY = []
+    #GPU_CLOCK = []
+    #MEMORY_CLOCK = []
+    #SHADERS_TMUs_ROPs = []
 
     print(gpu_scrapped.get_attribute('innerHTML'))
     time.sleep(10)

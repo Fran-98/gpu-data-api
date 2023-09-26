@@ -26,10 +26,10 @@ for i in gpus_elements:
     print(f'added {GPU[-1]}, score of {SCORE[-1]}, ${PRICE[-1]}')
 
 df = pd.DataFrame({
-    'GPU': GPU,
-    'SCORE': SCORE,
-    'PRICE': PRICE
+    'gpuName': GPU,
+    'score': SCORE,
+    'price': PRICE
 })
-df = df.sort_values(by='SCORE')
+df = df.sort_values(by='score')
 print(df)
 df.to_csv('utils/data scrapper/gpu_benchmark_data.csv', index=False)

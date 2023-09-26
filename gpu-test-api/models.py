@@ -2,11 +2,11 @@ import db
 
 from sqlalchemy import Column, Integer, String, Float
 
-class GPU(db.Base):
-    __tablename__ = 'GPU'
+class gpuBenchmarks(db.Base):
+    __tablename__ = 'gpu_benchmark'
 
     #id = Column(Integer, primary_key=True)
-    name = Column(String(128), primary_key=True, nullable=False)
+    gpuName = Column(String(128), primary_key=True, nullable=False)
     score = Column(Integer, nullable=False)
     price = Column(Float)
 
