@@ -39,34 +39,40 @@ The base URL for all API requests is:
 `https://example.com`
 
 ## Endpoints
-```GET /gpu_info_all```
-    Returns a json with all the GPUs that are inside the database.
+### ```GET /gpu_info_all```
+Returns a json with all the GPUs that are inside the database.
+### Parameters
+WIP
+### Response
+WIP
+### Example
+WIP
 
-```GET /gpu_info``` 
-*gpu_name:str* 
-    Returns all the data of the GPU.
+### ```GET /gpu_info``` 
+Returns all the data of the GPU.
+
 ### Parameters
 - `name`: Name of the GPU, it can admit multiple names at once.
 
 ### Response
 Return a JSON object with the following properties:
 - `gpus`: A list with GPU objects, each with the following properties:
-    - `name`:
-    - `manufacturer`:
-    - `release`:
-    - `memory_size`:
-    - `memory_bus_width`:
-    - `gpu_clock`:
-    - `memory_clock`
-    - `unified_shader`:
-    - `tmu`:
-    - `rop`:
-    - `pixel_shader`:
-    - `vertex_shader`:
-    - `igp`:
-    - `bus`:
-    - `memory_type`:
-    - `gpu_chip`:
+    - `name`: Name of the graphics card.
+    - `manufacturer`: Manufacturer of the GPU.
+    - `release`: Release date.
+    - `memory_size`: VRAM memory size.
+    - `memory_bus_width`: Width of the memory bus.
+    - `gpu_clock`: GPU clock.
+    - `memory_clock`: Memory clock.
+    - `unified_shader`: Unified shaders.
+    - `tmu`: TMU. (if it exist in the DB)
+    - `rop`: ROP. (if it exist in the DB)
+    - `pixel_shader`: Pixel shard. (if it exist in the DB)
+    - `vertex_shader`: Vertex shader. (if it exist in the DB)
+    - `igp`: If it has IGP.
+    - `bus`: BUS type.
+    - `memory_type`: Memory Type.
+    - `gpu_chip`: GPU chipset.
 
 ### Example
 #### Request
@@ -119,14 +125,35 @@ GET /gpu_info?name=GTX%201060&name=RX%207700
 
 
 
-- GET `/gpu_compare/{gpu1}&{gpu2}` *gpu1:str*, *gpu2:str* 
-    Returns a json with the comparison of the GPUs.
+### GET `/gpu_compare/{gpu1}&{gpu2}` 
+Returns a json with the comparison of the GPUs.
+### Parameters
+WIP
+### Response
+WIP
+### Example
+WIP
+ 
 
-- GET `/gpu_in_rank/{rank}` *rank:int*
-    Returns a json with the GPU in the rank inserted.
+### GET `/gpu_in_rank/{rank}`
+Returns a json with the GPU in the rank inserted.
+### Parameters
+WIP
+### Response
+WIP
+### Example
+WIP
 
-- GET `/gpu_info/manufacturer`
-    Return a json with the gpus made by the manufacturer and the series if especified.
+
+### GET `/gpu_info/manufacturer`
+Return a json with the gpus made by the manufacturer and the series if especified.
+### Parameters
+WIP
+### Response
+WIP
+### Example
+WIP
+
 
 #### Errors
 This API uses the following error codes:
