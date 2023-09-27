@@ -24,8 +24,13 @@ DB_PASSWORD
 6. Work in progress
 
 ## TO DO
-- [ ] Designate endpoints
-- [ ] Create and populate DB
+- [x] Designate endpoints
+- [x] Create and populate DB
+- [ ] Clean data on DB
+- [x] Models
+- [ ] Create endpoints
+- [ ] Template home
+- [ ] Testing
 - [ ] Host API
 
 ## Endpoints
@@ -33,7 +38,7 @@ DB_PASSWORD
     Returns a json with all the GPUs that are inside the database.
 
 - GET `/gpu_info/{gpu_name}` *gpu_name:str* 
-    Returns a json with the SCORE and PRICE of the GPU.
+    Returns a json with all the data of the GPU.
     
 - GET `/gpu_compare/{gpu1}&{gpu2}` *gpu1:str*, *gpu2:str* 
     Returns a json with the comparison of the GPUs.
@@ -41,4 +46,6 @@ DB_PASSWORD
 - GET `/gpu_in_rank/{rank}` *rank:int*
     Returns a json with the GPU in the rank inserted.
 
-- GET `/`
+- GET `/gpu_info/manufacturer`
+    Return a json with the gpus made by the manufacturer and the series if especified.
+

@@ -1,8 +1,8 @@
-GPU,SCORE,PRICE
+gpuName,averageScore,price
 RTX A2000 Laptop GPU,"10,032",NA
 GeForce GTX 1070 with Max-Q Design,"10,051",NA
 Radeon R9 Fury X,"10,062",NA
-GeForce GTX 1060,"10,070",279.99
+GeForce GTX 1060,"10,071",279.99
 GeForce GTX 1650 SUPER,"10,115",184.05
 RTX A1000 6GB Laptop GPU,"10,131",NA
 GeForce RTX 3050 Ti Laptop GPU,"10,160",NA
@@ -14,7 +14,7 @@ Tesla M40 24GB,"10,475",NA
 Radeon Pro SSG,"10,498","2,410.15"
 Tesla T4,"10,693","4,646.99"
 GeForce RTX 3050 6GB Laptop GPU,"10,760",NA
-RTX A2000 8GB Laptop GPU,"10,936",NA
+RTX A2000 8GB Laptop GPU,"10,939",NA
 Quadro P4200 with Max-Q Design,"11,020",NA
 GRID P40-12Q,"11,028",NA
 RTX A1000 Embedded GPU,"11,047",NA
@@ -26,7 +26,7 @@ GeForce RTX 2060 (Mobile),"11,355",NA
 Radeon RX 5600,"11,471",NA
 GeForce GTX 1080 with Max-Q Design,"11,571",NA
 Quadro P4000,"11,641",556.19
-GeForce GTX 1660,"11,723",286.99
+GeForce GTX 1660,"11,723",286.05
 Quadro M6000 24GB,"11,787",NA
 Quadro M6000,"11,797","4,827.53"
 Radeon Pro 5700,"11,844",NA
@@ -35,6 +35,7 @@ GeForce RTX 3050 OEM,"12,077",NA
 Quadro P5000,"12,227","1,868.99"
 Radeon Pro V520 MxGPU,"12,258",NA
 Radeon RX 6850M,"12,274",NA
+Tesla V100-PCIE-16GB,"12,288",NA
 Radeon Pro Vega 56,"12,354",NA
 GeForce RTX 2070 (Mobile),"12,354",NA
 RTX A3000 Laptop GPU,"12,514",NA
@@ -49,7 +50,7 @@ Radeon RX 5600 OEM,"12,738",NA
 GeForce GTX 1660 SUPER,"12,790",199.99
 Radeon Pro Vega 64,"12,919",NA
 GeForce GTX 1660 Ti,"12,961",334.00
-GeForce RTX 3050,"12,969",219.99
+GeForce RTX 3050,"12,969",224.71
 Radeon RX 7600S,"13,011",NA
 Radeon RX 6800M,"13,047",NA
 GeForce GTX TITAN X,"13,058","1,096.99"
@@ -60,12 +61,12 @@ Radeon Pro WX 9100,"13,192",NA
 Radeon RX 6700M,"13,283",279.99
 GeForce RTX 3060 Laptop GPU,"13,401",309.99
 Radeon Vega Frontier Edition,"13,417","1,679.99"
-Radeon RX Vega 56,"13,463",752.99
-GeForce GTX 1070,"13,512",488.09
+Radeon RX Vega 56,"13,462",752.99
+GeForce GTX 1070,"13,511",488.09
 Radeon RX 6650M,"13,566",NA
 RTX A2000 12GB,"13,568",NA
 Quadro RTX 5000 with Max-Q Design,"13,585",NA
-Radeon RX 6600M,"13,617",209.99
+Radeon RX 6600M,"13,616",209.99
 NVIDIA TITAN X,"13,660",608.10
 Radeon RX 5600 XT,"13,788",545.00
 RTX A2000,"13,824",689.99
@@ -73,27 +74,27 @@ GeForce RTX 2080 Super with Max-Q Design,"13,832",NA
 GeForce GTX 980 Ti,"13,833",636.60
 GeForce RTX 2070 Super with Max-Q Design,"13,911",NA
 Radeon Pro WX 8200,"13,926","1,599.39"
-GeForce RTX 2060,"14,113",219.99
+GeForce RTX 2060,"14,114",219.99
 RadeonT RX 6850M XT,"14,432",NA
 Radeon RX Vega 64,"14,523",749.99
 Radeon Pro Vega 64X,"14,631",NA
-Radeon RX 5700,"14,661",309.99
+Radeon RX 5700,"14,655",309.99
 RTX A3000 12GB Laptop GPU,"14,693",NA
 GeForce GTX 1070 Ti,"14,716",569.99
-Radeon RX 6700S,"14,806",NA
+Radeon RX 6700S,"14,820",NA
 Quadro RTX 5000 (Mobile),"14,832",NA
 Radeon RX 6600S,"14,897",NA
-GeForce RTX 4050 Laptop GPU,"14,976",NA
+GeForce RTX 4050 Laptop GPU,"14,983",NA
 GeForce RTX 2080 (Mobile),"15,107",NA
-Radeon RX 6600,"15,149",329.00
+Radeon RX 6600,"15,144",329.00
 Radeon RX 7600M XT,"15,347",NA
 RTX 2000 Ada Generation Laptop GPU,"15,368",NA
 Quadro RTX 4000,"15,436",899.00
 Radeon Pro VII,"15,441",NA
-GeForce GTX 1080,"15,486",442.79
+GeForce GTX 1080,"15,484",442.79
 Radeon Pro W5700,"15,494",649.99
 Radeon RX 6800S,"15,537",NA
-GeForce RTX 3070 Laptop GPU,"15,545",NA
+GeForce RTX 3070 Laptop GPU,"15,544",NA
 RTX A4000 Laptop GPU,"15,565",NA
 Quadro GP100,"15,608",NA
 Quadro P6000,"15,619","3,250.00"
@@ -105,43 +106,43 @@ Miracast display port driver V3,"15,910",NA
 Radeon Pro Vega II Duo,"15,977",NA
 Quadro RTX 5000,"16,101",NA
 Radeon PRO W6600,"16,143",NA
-GeForce RTX 2070,"16,175",519.99
+GeForce RTX 2070,"16,174",519.99
 Tesla V100-SXM2-16GB,"16,235",NA
-Radeon RX 6600 XT,"16,454",349.99
+Radeon RX 6600 XT,"16,455",349.99
 Radeon RX 7600,"16,546",257.99
 GeForce RTX 2060 SUPER,"16,587",389.99
-GeForce RTX 3080 Laptop GPU,"16,605",NA
+GeForce RTX 3080 Laptop GPU,"16,598",NA
 Radeon RX 5700 XT 50th Anniversary,"16,641",NA
 Radeon VII,"16,765","1,899.95"
-Radeon RX 5700 XT,"16,847",363.12
+Radeon RX 5700 XT,"16,846",363.12
 TITAN V CEO Edition,"16,988",NA
-GeForce RTX 3060,"17,138",239.99
+GeForce RTX 3060,"17,139",239.99
 Radeon RX 7700S,"17,479",NA
-Radeon RX 6650 XT,"17,514",229.99
+Radeon RX 6650 XT,"17,511",229.99
 Radeon Pro W5700X,"17,591",NA
 RTX A4500 Laptop GPU,"17,671",NA
 RTX A5500 Laptop GPU,"17,839",NA
 A40-48Q,"17,864",NA
 Radeon RX 6850M XT,"18,236",NA
-GeForce RTX 2070 SUPER,"18,264",497.95
+GeForce RTX 2070 SUPER,"18,265",497.95
+GeForce RTX 4060 Laptop GPU,"18,284",NA
 NVIDIA A10G,"18,293",NA
-GeForce RTX 4060 Laptop GPU,"18,299",NA
 GeForce RTX 3070 Ti Laptop GPU,"18,375",NA
-GeForce GTX 1080 Ti,"18,530",483.82
-NVIDIA TITAN Xp,"18,679","1,645.00"
-GeForce RTX 2080,"18,810",800.61
+GeForce GTX 1080 Ti,"18,531",483.82
+NVIDIA TITAN Xp,"18,696","1,645.00"
+GeForce RTX 2080,"18,807",800.61
 Radeon RX 6700,"18,841",NA
 Quadro RTX 6000,"19,233","6,300.00"
 RTX A4000,"19,286",749.99
 TITAN Xp COLLECTORS EDITION,"19,356",NA
-GeForce RTX 4060,"19,369",299.99
+GeForce RTX 4060,"19,364",299.99
 Quadro RTX 8000,"19,402","4,741.49"
 Radeon PRO W7600,"19,589",NA
-GeForce RTX 2080 SUPER,"19,594",740.99
-GeForce RTX 4070 Laptop GPU,"19,604",NA
+GeForce RTX 2080 SUPER,"19,593",740.99
+GeForce RTX 4070 Laptop GPU,"19,607",NA
 Radeon PRO W6800,"19,755","1,849.99"
 TITAN V,"19,852","1,999.99"
-Radeon RX 6700 XT,"19,885",319.99
+Radeon RX 6700 XT,"19,883",319.99
 TITAN RTX,"19,912","2,499.00"
 FirePro 3D V8800,"2,438",424.99
 Ryzen 7 PRO 5750G with Radeon Graphics,"2,443",NA
@@ -188,14 +189,14 @@ Ryzen 7 Pro 4750G with Radeon Graphics,"2,682",NA
 GeForce GTX 465,"2,684",195.00
 Intel Iris Xe,"2,685",NA
 Radeon Ryzen 7 4700GE,"2,686",NA
-Radeon HD 8950,"2,687",NA
 GRID M10-2Q,"2,692",NA
+Radeon HD 8950,"2,693",NA
 Quadro 6000,"2,696","4,092.38"
-Radeon RX 550,"2,702",223.43
 Barco MXRT 5500,"2,702",299.00
-Radeon Ryzen 7 5800H,"2,703",NA
-Quadro K4000,"2,703",270.00
+Radeon RX 550,"2,702",223.43
 GRID T4-1Q,"2,703",NA
+Quadro K4000,"2,703",270.00
+Radeon Ryzen 7 5800H,"2,703",NA
 Ryzen 9 4900H with Radeon Graphics,"2,714",NA
 GeForce GTX 560,"2,715",205.00
 Radeon Pro 450,"2,723",NA
@@ -214,7 +215,7 @@ GeForce GTX 770M,"2,791",138.00
 Ryzen 7 5700G with Radeon Graphics,"2,805",NA
 FirePro 3D V9800,"2,812","2,499.00"
 FirePro W4300,"2,813",239.99
-GeForce MX350,"2,825",NA
+GeForce MX350,"2,821",NA
 Quadro M620,"2,827",NA
 Radeon HD 6970,"2,830",149.99
 GRID K280Q,"2,840",NA
@@ -226,54 +227,54 @@ Ryzen 7 PRO 4700G with Radeon Graphics,"2,880",NA
 Quadro K1200,"2,889",285.29
 Radeon R7 260,"2,892",89.99
 Quadro M1000M,"2,900",85.99
-Ryzen 9 5900HX with Radeon Graphics,"2,913",NA
+Ryzen 9 5900HX with Radeon Graphics,"2,914",NA
 Tesla K20Xm,"2,918",NA
 GRID K260Q,"2,949",NA
 FirePro W5000,"2,965",184.00
 FirePro W5100,"2,970",125.99
 GRID M10-4Q,"2,977",NA
-RTX A5500,"20,114","2,169.99"
 Radeon RX 7700 XT,"20,217",449.99
 RTX 3500 Ada Generation Laptop GPU,"20,285",NA
 GeForce RTX 3080 Ti Laptop GPU,"20,352",NA
-GeForce RTX 3060 Ti,"20,584",349.99
+GeForce RTX 3060 Ti,"20,584",318.49
 Quadro GV100,"20,600","8,999.00"
-Radeon RX 6750 XT,"21,123",349.99
+RTX A5500,"20,798","2,169.99"
+Radeon RX 6750 XT,"21,120",349.99
 RTX 4000 SFF Ada Generation,"21,300",NA
 RTX 5000 Ada Generation Laptop GPU,"21,349",NA
 RTX A4500,"21,687","1,079.99"
 GeForce RTX 2080 Ti,"21,861","1,399.99"
 NVIDIA A10,"22,064",NA
 Radeon RX 6800,"22,383",429.99
-GeForce RTX 3070,"22,484",434.99
-GeForce RTX 4060 Ti,"22,545",369.99
-GeForce RTX 4060 Ti 16GB,"22,650",499.00
+GeForce RTX 3070,"22,482",434.99
+GeForce RTX 4060 Ti,"22,512",369.99
+GeForce RTX 4060 Ti 16GB,"22,668",499.00
 RTX 6000 Ada Generation,"22,718",NA
 RTX A6000,"22,772","4,109.99"
-RTX A5000,"23,076","2,141.99"
-GeForce RTX 3070 Ti,"23,772",499.99
+RTX A5000,"23,075","2,141.99"
+GeForce RTX 3070 Ti,"23,770",499.99
 RTX 4000 Ada Generation Laptop GPU,"24,025",NA
-Radeon RX 7800 XT,"24,631",539.99
-Radeon RX 6800 XT,"25,187",499.99
-GeForce RTX 3080,"25,366",679.99
+Radeon RX 7800 XT,"24,729",519.99
+Radeon RX 6800 XT,"25,185",499.99
+GeForce RTX 3080,"25,367",679.99
 GeForce RTX 4080 Laptop GPU,"26,517",NA
-GeForce RTX 3080 12GB,"26,765",NA
-GeForce RTX 4070,"26,908",549.99
-GeForce RTX 3090,"26,922","1,762.53"
-Radeon RX 6900 XT,"26,962","1,434.61"
+GeForce RTX 3080 12GB,"26,751",NA
+GeForce RTX 4070,"26,892",549.99
+GeForce RTX 3090,"26,923","1,762.53"
+Radeon RX 6900 XT,"26,962",855.82
 GeForce RTX 3080 Ti,"27,342",849.99
 Radeon RX 7900 GRE,"28,086",NA
-Radeon RX 6950 XT,"28,634",832.05
-GeForce RTX 4090 Laptop GPU,"28,978",NA
-Radeon RX 7900 XT,"29,031",799.99
-GeForce RTX 3090 Ti,"29,802","1,626.46"
+Radeon RX 6950 XT,"28,629",832.05
+GeForce RTX 4090 Laptop GPU,"29,004",NA
+Radeon RX 7900 XT,"29,039",799.99
+GeForce RTX 3090 Ti,"29,805","1,626.46"
 Radeon HD 6990,"3,013",498.49
 Tesla C2075,"3,017",646.00
 Radeon R9 360,"3,032",133.89
 GeForce GTX 560 Ti,"3,033",129.99
 GeForce GTX 860M,"3,035",114.00
 EIZO MED-X5000,"3,038",NA
-Radeon R7 360,"3,070",145.99
+Radeon R7 360,"3,072",145.99
 GeForce GTX 470,"3,082",59.99
 Radeon HD 7790,"3,090",139.99
 Intel G35 Express,"3,090",NA
@@ -305,7 +306,7 @@ GRID M10-1Q,"3,351",NA
 GeForce GTX 750,"3,355",79.99
 Radeon E8870PCIe,"3,368",NA
 Radeon HD8970M,"3,369",NA
-GeForce GTX 960M,"3,398","1,169.00"
+GeForce GTX 960M,"3,399","1,169.00"
 Radeon R9 M470X,"3,400",NA
 NVIDIA A10-4Q,"3,425",NA
 Tesla C2050 / C2070,"3,428",NA
@@ -326,8 +327,8 @@ GRID M6-8Q,"3,568",NA
 GeForce GTX 680M KY_Bullet Edition,"3,569",NA
 GRID RTX8000-2Q,"3,574",NA
 Ryzen 5 PRO 6650U with Radeon Graphics,"3,575",NA
+Quadro P620,"3,588",574.55
 Radeon Ryzen 5 6600U,"3,589",NA
-Quadro P620,"3,589",574.55
 T400,"3,619",179.99
 Radeon RX Vega M GL,"3,623",NA
 Radeon RX 560,"3,643",183.50
@@ -339,12 +340,12 @@ Ryzen 5 6600H with Radeon Graphics,"3,674",NA
 Radeon Pro 560X,"3,678",NA
 Ryzen 5 7535HS with Radeon Graphics,"3,680",NA
 Ryzen 5 6600HS Creator Edition,"3,686",NA
-T400 4GB,"3,688",NA
 Matrox LUMA A310,"3,690",NA
+T400 4GB,"3,690",NA
 Eng Sample: 100-000000545-40_Y,"3,692",NA
 Ryzen 5 PRO 6650H with Radeon Graphics,"3,727",NA
 GeForce GTX 965M,"3,730",NA
-GeForce MX450,"3,733",NA
+GeForce MX450,"3,735",NA
 Ryzen 7 PRO 6850HS with Radeon Graphics,"3,736",NA
 Barco MXRT 7500,"3,753",299.00
 Radeon Pro WX 4100,"3,764",499.99
@@ -357,16 +358,16 @@ GRID RTX8000P-2Q,"3,843",NA
 Radeon HD 7970M,"3,847",NA
 Radeon Ryzen 5 7535U,"3,850",NA
 Radeon Ryzen 5 6600HS Creator Edition,"3,851",NA
-Radeon HD 7850,"3,852",169.99
+Radeon HD 7850,"3,853",169.99
 Radeon HD 8970M,"3,876",139.99
 Intel Arc A310,"3,876",NA
 GRID M60-8Q,"3,884",NA
 GeForce GTX 750 Ti,"3,901",88.11
-GeForce GTX 780M,"3,901",499.00
 Radeon Ryzen 9 PRO 6950HS,"3,902",NA
+GeForce GTX 780M,"3,904",499.00
 GeForce GTX 570,"3,916",149.99
 GRID P6-2Q,"3,926",NA
-GeForce GTX 1050 with Max-Q Design,"3,938",NA
+GeForce GTX 1050 with Max-Q Design,"3,942",NA
 Quadro M2000,"3,955",264.24
 GRID RTX8000-4Q,"3,961",NA
 A40-24Q,"3,973",NA
@@ -374,11 +375,11 @@ Quadro K5000,"3,973",249.00
 P104-100,"3,996",299.99
 GeForce GTX 660,"3,998",167.95
 Radeon PRO W7900,"30,892",NA
-Radeon RX 7900 XTX,"31,141",949.99
-GeForce RTX 4070 Ti,"31,652",799.99
+Radeon RX 7900 XTX,"31,137",949.99
+GeForce RTX 4070 Ti,"31,649",799.99
 Radeon PRO W7800,"32,146",NA
-GeForce RTX 4080,"34,814","1,093.66"
-GeForce RTX 4090,"38,945","1,599.99"
+GeForce RTX 4080,"34,819","1,093.66"
+GeForce RTX 4090,"38,943","1,609.99"
 Radeon Ryzen 7 4800H,"4,010",NA
 Radeon HD 7800-serie,"4,029",NA
 GeForce GTX 480,"4,040",169.99
@@ -437,7 +438,7 @@ FirePro S10000,"4,768",NA
 GeForce GTX 760,"4,775",149.00
 GRID RTX6000P-6Q,"4,777",NA
 Ryzen 7 PRO 6860Z with Radeon Graphics,"4,789",NA
-T550 Laptop GPU,"4,796",NA
+T550 Laptop GPU,"4,801",NA
 GRID P40-2Q,"4,844",NA
 Ryzen 7 6800U with Radeon Graphics,"4,845",NA
 FirePro S9050,"4,901",NA
@@ -451,7 +452,7 @@ Ryzen 7 6800U,"5,006",NA
 Radeon R9 M395,"5,024",NA
 Radeon R9 M395X,"5,038",NA
 Ryzen 7 PRO 6850U with Radeon Graphics,"5,043",NA
-GeForce GTX 1050,"5,044",239.99
+GeForce GTX 1050,"5,045",239.99
 EIZO Quadro MED-XN51LP,"5,048",NA
 GRID T4-16Q,"5,055",NA
 FirePro S9000,"5,059",NA
@@ -473,7 +474,7 @@ Ryzen 7 6800H,"5,248",NA
 Radeon HD 7970 / R9 280X,"5,248",246.99
 Radeon 760M,"5,261",NA
 Radeon Pro Vega 20,"5,264",NA
-Radeon Ryzen 9 6900HX,"5,274",NA
+Radeon Ryzen 9 6900HX,"5,278",NA
 Radeon Ryzen 7 7735HS,"5,305",NA
 Ryzen 7 7735HS with Radeon Graphics,"5,307",NA
 GeForce GTX 670,"5,309",193.98
@@ -481,8 +482,8 @@ FirePro W7100,"5,321",389.30
 Ryzen 7 6800HS Creator Edition,"5,345",NA
 GeForce GTX 950,"5,346",141.99
 GRID P40-4Q,"5,365",NA
-GeForce GTX 1050 Ti with Max-Q Design,"5,368",NA
 Radeon RX 5500M,"5,372",NA
+GeForce GTX 1050 Ti with Max-Q Design,"5,372",NA
 Radeon Ryzen 7 6800HS Creator Edition,"5,373",NA
 Ryzen 9 6900HX,"5,416",NA
 GeForce GTX 760 Ti OEM,"5,427",NA
@@ -495,7 +496,7 @@ NVIDIA A40-12Q,"5,573",NA
 Radeon Ryzen 7 6800H,"5,574",NA
 GeForce GTX 690,"5,580",280.99
 Ryzen 7 PRO 6850U,"5,581",NA
-Radeon R9 280,"5,593",NA
+Radeon R9 280,"5,592",NA
 Ryzen 9 5900HS with Radeon Graphics,"5,612",NA
 Radeon Ryzen 7 7735H,"5,626",NA
 Radeon Pro WX 5100,"5,653",359.99
@@ -515,16 +516,16 @@ Radeon Ryzen 9 7950X 16-Core,"6,019",NA
 GeForce MX570,"6,040",NA
 GeForce GTX 960,"6,041",172.00
 GeForce MX570 A,"6,069",NA
-GeForce GTX 1650 with Max-Q Design,"6,103",NA
+GeForce GTX 1650 with Max-Q Design,"6,104",NA
 P106-100,"6,106",NA
 FirePro W9000,"6,138",845.00
 Radeon 680M Ryzen 7 7735HS,"6,180",NA
 Tesla K80,"6,192",593.95
 Quadro M4000M,"6,206",254.91
-Radeon R9 380,"6,228",89.99
-Radeon R9 280X,"6,242",NA
+Radeon R9 380,"6,227",89.99
+Radeon R9 280X,"6,240",NA
 Radeon R9 380X,"6,242",349.99
-GeForce GTX 1050 Ti,"6,300",145.30
+GeForce GTX 1050 Ti,"6,301",145.30
 Ryzen 9 6900HS with Radeon Graphics,"6,331",NA
 Radeon Pro 570,"6,337",NA
 GeForce GTX 1650 Ti with Max-Q Design,"6,390",NA
@@ -532,7 +533,7 @@ AMD Ryzen Z1 Extreme,"6,442",NA
 T600,"6,473",239.99
 Radeon Pro WX 7130,"6,578",NA
 Radeon RX Vega M GH,"6,581",NA
-Quadro T1000,"6,612",378.99
+Quadro T1000,"6,609",378.99
 Quadro P3000,"6,622",NA
 Radeon Ryzen 7 6800HS,"6,657",NA
 Quadro M4000,"6,662",362.00
@@ -542,35 +543,35 @@ GeForce GTX 970XM FORCE,"6,707",NA
 Radeon Pro 5500M,"6,817",NA
 Radeon Ryzen 9 6900HS,"6,861",NA
 Ryzen 7 6800HS with Radeon Graphics,"6,867",NA
-RadeonT 780M,"6,901",NA
 Quadro T2000 with Max-Q Design,"6,915",NA
-Quadro P2000,"6,926",439.60
+Quadro P2000,"6,923",439.60
+RadeonT 780M,"6,935",NA
 RTX A500 Laptop GPU,"6,943",NA
 Radeon Pro W5500X,"6,967",NA
 GeForce GTX 1650 (Mobile),"6,969",NA
+GeForce RTX 2050,"6,982",NA
 Ryzen 7 4800HS with Radeon Graphics,"6,999",NA
-GeForce RTX 2050,"7,013",NA
-Quadro M5000M,"7,031",546.92
 A10-8Q,"7,042",NA
+Quadro M5000M,"7,054",546.92
 T600 Laptop GPU,"7,069",NA
 Intel Arc A770M,"7,097",NA
 GeForce RTX 3050 4GB Laptop GPU,"7,130",NA
-Quadro T2000,"7,142",528.35
+Quadro T2000,"7,144",528.35
 Radeon Ryzen 9 4900HS,"7,186",NA
 Tesla P100-PCIE-16GB,"7,225",NA
 Radeon Pro 5300,"7,230",NA
-Radeon 780M,"7,250",NA
+Radeon 780M,"7,251",NA
 FirePro W8100,"7,279",704.00
 GeForce GTX 980M,"7,358",289.99
 Radeon RX 6500,"7,367",NA
-Radeon RX 6400,"7,443",159.99
+Radeon RX 6400,"7,443",184.99
 Tesla M6,"7,509",199.00
 Radeon Pro 580X,"7,540",NA
 GeForce GTX 1650 Ti,"7,561",NA
-T1000 8GB,"7,585",NA
+T1000 8GB,"7,578",NA
 Radeon RX 5300,"7,652",NA
 T1000,"7,660",399.99
-Radeon RX 580 2048SP,"7,736",NA
+Radeon RX 580 2048SP,"7,735",NA
 Radeon Pro 580,"7,753",NA
 Tesla M60,"7,771",787.90
 T1200 Laptop GPU,"7,775",NA
@@ -605,11 +606,11 @@ Radeon R9 290X,"8,660",NA
 GeForce GTX 1660 Ti with Max-Q Design,"8,664",NA
 Radeon RX 480,"8,670",339.99
 Radeon RX 5500,"8,833",NA
-Intel Arc A770,"8,855",329.99
+Intel Arc A770,"8,876",329.99
 Radeon RX 580,"8,910",179.99
 GeForce GTX 1060 5GB,"8,946",487.99
 GRID P40-8Q,"8,967",NA
-Quadro P3200,"8,982",389.30
+Quadro P3200,"8,987",389.30
 GeForce GTX TITAN Z,"8,987","1,515.00"
 Radeon R9 390,"9,001",NA
 GeForce GTX TITAN Black,"9,011",524.99
@@ -628,12 +629,12 @@ Radeon R9 390X,"9,447",NA
 Radeon Ryzen 9 4900HSS,"9,461",NA
 GeForce GTX 780 Ti,"9,480",339.99
 RTX A1000 Laptop GPU,"9,495",NA
-Radeon RX 6500 XT,"9,507",169.00
+Radeon RX 6500 XT,"9,510",169.00
 Radeon RX 590,"9,531",549.99
 Radeon R9 Fury,"9,618",443.10
 GeForce GTX 970,"9,640",237.99
 Radeon R9 Fury + Fury X,"9,741",449.99
 GeForce GTX 1060 3GB,"9,750",269.99
-GeForce RTX 2060 with Max-Q Design,"9,798",NA
+GeForce RTX 2060 with Max-Q Design,"9,802",NA
 GRID P40-2B,"9,842",NA
 NVIDIA A40,"9,983",NA

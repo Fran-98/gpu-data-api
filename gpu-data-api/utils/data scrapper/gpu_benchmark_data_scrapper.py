@@ -27,9 +27,10 @@ for i in gpus_elements:
 
 df = pd.DataFrame({
     'gpuName': GPU,
-    'score': SCORE,
+    'averageScore': SCORE,
     'price': PRICE
 })
-df = df.sort_values(by='score')
+
+df = df.sort_values(by='averageScore')
 print(df)
-df.to_csv('utils/data scrapper/gpu_benchmark_data.csv', index=False)
+df.to_csv('gpu-data-api/utils/data scrapper/gpu_benchmark_data.csv', index=False)
