@@ -29,9 +29,46 @@ def gpu_info():
         Session = sessionmaker(bind=db.engine)
         session = Session()
         query=f'SELECT * FROM gpu_spec'
-        datos_guardados = pd.read_sql_query(query, db.engine)
-        datos_guardados_json=datos_guardados.to_dict()
-        return jsonify({'datos':datos_guardados_json})
+        gpu_info = pd.read_sql_query(query, db.engine)
+        gpu_info_json=gpu_info.to_dict()
+        return jsonify({'datos':gpu_info_json})
+    except Exception as ex:
+        return 'error'
+
+
+
+
+
+
+@app.route('/gpu_info/<manufacturer>', methods=['GET'])
+def manufacture(manufacturer):
+    try:
+        Session = sessionmaker(bind=db.engine)
+        session = Session()
+        query=f"SELECT * FROM gpu_spec WHERE manufacturer = '{manufacturer}' "
+        gpu_info = pd.read_sql_query(query, db.engine)
+        gpu_info_json=gpu_info.to_dict()
+        return jsonify({'datos':gpu_info_json})
+    except Exception as ex:
+        return 'error'
+
+
+@app.route('/gpu_in_rank/<rank>', methods=['GET'])
+def manufacture(rank):
+    try:
+        Session = sessionmaker(bind=db.engine)
+        session = Session()
+        if rank == 1:
+            query="SELECT * FROM gpu_benchmark ORDER BY score DESC LIMIT 1 ; "
+            gpu_info = pd.read_sql_query(query, db.engine)
+            gpu_info_json=gpu_info.to_dict()
+            return jsonify({'datos':gpu_info_json})
+        else:
+            query=f"SELECT * FROM gpu_benchmark ORDER BY score DESC LIMIT 1 OFFSET {rank - 1}; "
+            gpu_info = pd.read_sql_query(query, db.engine)
+            gpu_info_json=gpu_info.to_dict()
+            return jsonify({'datos':gpu_info_json})
+
     except Exception as ex:
         return 'error'
 
