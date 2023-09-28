@@ -13,12 +13,7 @@ app = Flask(__name__)
 def run():
     app.run()
     pass
-"""
-@app.route('/gpu_info', methods=['GET'])
-def gpu_info():
-    args = request.args
-    return args
-"""
+
 @app.route('/')
 def buenas():
     return jsonify({"message": "Buenas!!!"})
@@ -115,27 +110,53 @@ def manufacture(manufacturer):
         session = Session()
         query=f"SELECT * FROM gpu_spec WHERE manufacturer = '{manufacturer}' "
         gpu_info = pd.read_sql_query(query, db.engine)
-        gpu_info_json=gpu_info.to_dict()
-        return jsonify({'datos':gpu_info_json})
+        gpu_info_list=gpu_info.values.tolist()
+        gpu_manufacturer =[]
+        for gpu in gpu_info_list:
+            gpu_data_formated = {
+                "name":gpu_info_list[0][1],
+                "releaseYear":gpu_info_list[0][2],
+                "memory_size":gpu_info_list[0][3],
+                "memory_bus_width":gpu_info_list[0][4],
+                "gpu_clock":gpu_info_list[0][5],
+                "memory_clock":gpu_info_list[0][6],
+                "unified_shader":gpu_info_list[0][7],
+                "tmu":gpu_info_list[0][8],
+                "rop":gpu_info_list[0][9],
+                "pixel_shader":gpu_info_list[0][10],
+                "vertex_shader":gpu_info_list[0][11],
+                "igp":gpu_info_list[0][12],
+                "bus":gpu_info_list[0][13],
+                "memory_type":gpu_info_list[0][14],
+                "gpu_chip":gpu_info_list[0][15],
+            }
+            gpu_manufacturer.append(gpu_data_formated)
+
+        return jsonify({'gpu according to manufacturer':gpu_manufacturer})
+        
     except Exception as ex:
         return 'error'
 
 
 @app.route('/gpu_in_rank/<rank>', methods=['GET'])
-def manufacture(rank):
+def get_rank(rank):
     try:
+        real_rank=int(rank)-1
         Session = sessionmaker(bind=db.engine)
         session = Session()
-        if rank == 1:
-            query="SELECT * FROM gpu_benchmark ORDER BY score DESC LIMIT 1 ; "
-            gpu_info = pd.read_sql_query(query, db.engine)
-            gpu_info_json=gpu_info.to_dict()
-            return jsonify({'datos':gpu_info_json})
-        else:
-            query=f"SELECT * FROM gpu_benchmark ORDER BY score DESC LIMIT 1 OFFSET {rank - 1}; "
-            gpu_info = pd.read_sql_query(query, db.engine)
-            gpu_info_json=gpu_info.to_dict()
-            return jsonify({'datos':gpu_info_json})
+        query=f"SELECT * FROM gpu_benchmark ORDER BY averageScore DESC LIMIT 1 OFFSET {real_rank}; "
+        gpu_info_query = pd.read_sql_query(query, db.engine)
+        gpu_info_list=gpu_info_query.values.tolist()
+        gpu_in_rank =[]
+        for gpu in gpu_info_list:
+            gpu_data_formated = {
+                "gpuName":gpu_info_list[0][0],
+                "averageScore":gpu_info_list[0][1],
+                "price":gpu_info_list[0][2],
+            }
+            gpu_in_rank.append(gpu_data_formated)
+
+        return jsonify({'gpu in rank':gpu_in_rank})
 
     except Exception as ex:
         return 'error'
