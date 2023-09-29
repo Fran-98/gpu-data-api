@@ -26,9 +26,32 @@ def gpu_info_all():
         Session = sessionmaker(bind=db.engine)
         session = Session()
         query=f'SELECT * FROM gpu_spec'
-        gpu_info = pd.read_sql_query(query, db.engine)
-        gpu_info_json=gpu_info.to_dict()
-        return jsonify({'datos':gpu_info_json})
+        gpu_info_query = pd.read_sql_query(query, db.engine)
+        gpu_info_list=gpu_info_query.values.tolist()
+        gpu_info=[]
+
+        for gpu in gpu_info_list:
+            gpu_data_formated = {
+                "manufacturer":gpu_info_list[0][0],
+                "name":gpu_info_list[0][1],
+                "releaseYear":gpu_info_list[0][2],
+                "memory_size":gpu_info_list[0][3],
+                "memory_bus_width":gpu_info_list[0][4],
+                "gpu_clock":gpu_info_list[0][5],
+                "memory_clock":gpu_info_list[0][6],
+                "unified_shader":gpu_info_list[0][7],
+                "tmu":gpu_info_list[0][8],
+                "rop":gpu_info_list[0][9],
+                "pixel_shader":gpu_info_list[0][10],
+                "vertex_shader":gpu_info_list[0][11],
+                "igp":gpu_info_list[0][12],
+                "bus":gpu_info_list[0][13],
+                "memory_type":gpu_info_list[0][14],
+                "gpu_chip":gpu_info_list[0][15],
+            }
+            gpu_info.append(gpu_data_formated)
+
+        return jsonify({'all gpus':gpu_info})
     except Exception as ex:
         return 'error'
 
