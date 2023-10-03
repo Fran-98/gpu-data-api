@@ -1,7 +1,8 @@
 import db
 import utils.misc
-from models import gpuBenchmarks
+from models import gpuBenchmarks, gpu_spec
 from flask import Flask, request, jsonify
+from sqlalchemy import MetaData, Table
 from sqlalchemy.orm import sessionmaker
 import pandas as pd
 
@@ -32,25 +33,26 @@ def gpu_info_all():
 
         for gpu in gpu_info_list:
             gpu_data_formated = {
-                "manufacturer":gpu_info_list[0][0],
-                "name":gpu_info_list[0][1],
-                "releaseYear":gpu_info_list[0][2],
-                "memory_size":gpu_info_list[0][3],
-                "memory_bus_width":gpu_info_list[0][4],
-                "gpu_clock":gpu_info_list[0][5],
-                "memory_clock":gpu_info_list[0][6],
-                "unified_shader":gpu_info_list[0][7],
-                "tmu":gpu_info_list[0][8],
-                "rop":gpu_info_list[0][9],
-                "pixel_shader":gpu_info_list[0][10],
-                "vertex_shader":gpu_info_list[0][11],
-                "igp":gpu_info_list[0][12],
-                "bus":gpu_info_list[0][13],
-                "memory_type":gpu_info_list[0][14],
-                "gpu_chip":gpu_info_list[0][15],
+                "manufacturer":gpu[0],
+                "name":gpu[1],
+                "releaseYear":gpu[2],
+                "memory_size":gpu[3],
+                "memory_bus_width":gpu[4],
+                "gpu_clock":gpu[5],
+                "memory_clock":gpu[6],
+                "unified_shader":gpu[7],
+                "tmu":gpu[8],
+                "rop":gpu[9],
+                "pixel_shader":gpu[10],
+                "vertex_shader":gpu[11],
+                "igp":gpu[12],
+                "bus":gpu[13],
+                "memory_type":gpu[14],
+                "gpu_chip":gpu[15],
             }
             gpu_info.append(gpu_data_formated)
 
+        session.close()
         return jsonify({'all gpus':gpu_info})
     except Exception as ex:
         return 'error'
@@ -137,24 +139,24 @@ def manufacture(manufacturer):
         gpu_manufacturer =[]
         for gpu in gpu_info_list:
             gpu_data_formated = {
-                "name":gpu_info_list[0][1],
-                "releaseYear":gpu_info_list[0][2],
-                "memory_size":gpu_info_list[0][3],
-                "memory_bus_width":gpu_info_list[0][4],
-                "gpu_clock":gpu_info_list[0][5],
-                "memory_clock":gpu_info_list[0][6],
-                "unified_shader":gpu_info_list[0][7],
-                "tmu":gpu_info_list[0][8],
-                "rop":gpu_info_list[0][9],
-                "pixel_shader":gpu_info_list[0][10],
-                "vertex_shader":gpu_info_list[0][11],
-                "igp":gpu_info_list[0][12],
-                "bus":gpu_info_list[0][13],
-                "memory_type":gpu_info_list[0][14],
-                "gpu_chip":gpu_info_list[0][15],
+                "name":gpu[1],
+                "releaseYear":gpu[2],
+                "memory_size":gpu[3],
+                "memory_bus_width":gpu[4],
+                "gpu_clock":gpu[5],
+                "memory_clock":gpu[6],
+                "unified_shader":gpu[7],
+                "tmu":gpu[8],
+                "rop":gpu[9],
+                "pixel_shader":gpu[10],
+                "vertex_shader":gpu[11],
+                "igp":gpu[12],
+                "bus":gpu[13],
+                "memory_type":gpu[14],
+                "gpu_chip":gpu[15],
             }
             gpu_manufacturer.append(gpu_data_formated)
-
+        session.close()
         return jsonify({'gpu according to manufacturer':gpu_manufacturer})
         
     except Exception as ex:
@@ -178,15 +180,121 @@ def get_rank(rank):
                 "price":gpu_info_list[0][2],
             }
             gpu_in_rank.append(gpu_data_formated)
-
+        session.close()
         return jsonify({'gpu in rank':gpu_in_rank})
 
     except Exception as ex:
         return 'error'
 
 
+@app.route('/gpu_info_post', methods=['POST'])
+def gpu_post():
+    
+    try:
+        Session = sessionmaker(bind=db.engine)
+        session = Session()
+        
+        data = request.json
+        manufacturer = data.get("manufacturer")
+        gpuName = data.get("gpuName")  
+        releaseYear = data.get("releaseYear")
+        memSize = data.get("memorySize")  
+        memBusWidth = data.get("memoryBusWidth")  
+        gpuClock = data.get("gpuClock")
+        memClock = data.get("memoryClock")  
+        unifiedShader = data.get("unifiedShader")
+        tmu = data.get("tmu")
+        rop = data.get("rop")
+        pixelShader = data.get("pixelShader")
+        vertexShader = data.get("vertexShader")
+        igp = data.get("igp")
+        bus = data.get("bus")
+        memType = data.get("memoryType") 
+        gpuChip = data.get("gpuChip")
+        averageScore = data.get("averageScore")
+        price = data.get("price")
+
+        gpu_added = gpu_spec(manufacturer=manufacturer, gpuName=gpuName, releaseYear=releaseYear, memSize=memSize, memBusWidth=memBusWidth, gpuClock=gpuClock, memClock=memClock, unifiedShader=unifiedShader, tmu=tmu, rop=rop, pixelShader=pixelShader, vertexShader=vertexShader, igp=igp, bus=bus, memType=memType, gpuChip=gpuChip,)
+        session.add(gpu_added)
+        session.commit()
 
 
+        gpu_bench_added=gpuBenchmarks(gpuName=gpuName, averageScore=averageScore, price=price)
+        session.add(gpu_bench_added)
+        session.commit()
+
+        session.close()
+        return jsonify({'Messege':'GPU added'})
+    except Exception as ex:
+        print(str(ex))
+        return f'error {ex}'
+
+
+@app.route('/gpu_delete/<gpu_name>', methods=['DELETE'])
+def gpu_delete(gpu_name):
+    try:
+        print(f"Received DELETE request for GPU name: {gpu_name}")
+        Session = sessionmaker(bind=db.engine)
+        session = Session()
+        
+        gpu_to_delete_spec = session.query(gpu_spec).filter_by(gpuName=gpu_name).first()
+        session.delete(gpu_to_delete_spec)
+        session.commit()
+
+        gpu_to_delete_Benchmark = session.query(gpuBenchmarks).filter_by(gpuName=gpu_name).first()
+        session.delete(gpu_to_delete_Benchmark)
+        session.commit()
+
+
+        session.close()
+
+        return jsonify({'Messege':'GPU delete'})
+
+    except Exception as ex:
+        return f'error {ex}'
+
+
+@app.route('/gpu_update/<gpu_name>', methods=['PUT'])
+def gpu_update(gpu_name):
+    try:
+        Session = sessionmaker(bind=db.engine)
+        session = Session()
+        
+
+        gpu_to_update_spec = session.query(gpu_spec).filter_by(gpuName=gpu_name).first()
+
+        gpu_to_update_spec.manufacturer = request.json['manufacturer']
+        gpu_to_update_spec.gpuName = request.json['gpuName']
+        gpu_to_update_spec.releaseYear = request.json['releaseYear']
+        gpu_to_update_spec.memSize = request.json['memSize']
+        gpu_to_update_spec.memBusWidth = request.json['memBusWidth']
+        gpu_to_update_spec.gpuClock = request.json['gpuClock']
+        gpu_to_update_spec.memClock = request.json['memClock']
+        gpu_to_update_spec.unifiedShader = request.json['unifiedShader']
+        gpu_to_update_spec.tmu = request.json['tmu']
+        gpu_to_update_spec.rop = request.json['rop']
+        gpu_to_update_spec.pixelShader = request.json['pixelShader']
+        gpu_to_update_spec.vertexShader = request.json['vertexShader']
+        gpu_to_update_spec.igp = request.json['igp']
+        gpu_to_update_spec.bus = request.json['bus']
+        gpu_to_update_spec.memType = request.json['memType']
+        gpu_to_update_spec.gpuChip = request.json['gpuChip']
+        session.commit()
+
+        gpu_to_update_Benchmark = session.query(gpuBenchmarks).filter_by(gpuName=gpu_name).first()
+
+        gpu_to_update_Benchmark.gpuName = request.json['gpuName']
+        gpu_to_update_Benchmark.averageScore = request.json['averageScore']
+        gpu_to_update_Benchmark.price = request.json['price']
+
+        session.commit()
+        session.close()
+
+        return jsonify({'Message': 'GPU updated'})
+        
+
+    except Exception as ex:
+        return f'error {ex}'
 
 
 

@@ -40,14 +40,43 @@ The base URL for all API requests is:
 
 ## Endpoints
 ### ```GET /gpu_info_all```
-Returns a json with all the GPUs that are inside the database.
-### Parameters
-WIP
-### Response
-WIP
-### Example
-WIP
 
+### Response
+Returns a json with all the GPUs that are inside the database.
+### Example
+#### Request
+```
+GET /gpu_info_all/
+```
+#### Response
+```
+{
+  "all gpus": [
+    {
+      "bus": "PCIe 4.0 x16",
+      "gpu_chip": "AD106",
+      "gpu_clock": 1925,
+      "igp": "No",
+      "manufacturer": "NVIDIA",
+      "memory_bus_width": 128.0,
+      "memory_clock": 2250.0,
+      "memory_size": 8.0,
+      "memory_type": "GDDR6",
+      "name": "GeForce RTX 4050",
+      "pixel_shader": NaN,
+      "releaseYear": 2023.0,
+      "rop": 48,
+      "tmu": 120,
+      "unified_shader": 3840.0,
+      "vertex_shader": NaN
+    },
+    {
+        ...
+    },
+    ...
+  ]
+}
+```
 ### ```GET /gpu_info``` 
 Returns all the data of the GPU.
 
@@ -138,22 +167,170 @@ WIP
 ### GET `/gpu_in_rank/{rank}`
 Returns a json with the GPU in the rank inserted.
 ### Parameters
-WIP
-### Response
-WIP
+`rank`: Position of the best performance ranking in which the gpu is located. The value must be only a one number.
 ### Example
-WIP
+#### Request
+```
+GET /gpu_in_rank/1
+```
+#### Response
+```
+{
+  "gpu in rank": [
+    {
+      "averageScore": "9,983",
+      "gpuName": "NVIDIA A40",
+      "price": null
+    }
+  ]
+}
+```
 
 
-### GET `/gpu_info/manufacturer`
-Return a json with the gpus made by the manufacturer and the series if especified.
+### GET `/gpu_info/{manufacturer}`
+Return a json with the gpus made by the manufacturer.
 ### Parameters
-WIP
-### Response
-WIP
+`manufacturer`:name of the company that manufactured the gpu. The available companies are: AMD, NVIDIA or Intel
 ### Example
-WIP
+#### Request
+```
+GET /gpu_info/amd
+```
+#### Response
+```
+{
+  "gpu according to manufacturer": [
+    {
+      "bus": "PCIe 4.0 x8",
+      "gpu_chip": "Rembrandt",
+      "gpu_clock": 1500,
+      "igp": "Yes",
+      "memory_bus_width": NaN,
+      "memory_clock": NaN,
+      "memory_size": NaN,
+      "memory_type": "System Shared",
+      "name": "Radeon 660M",
+      "pixel_shader": NaN,
+      "releaseYear": 2022.0,
+      "rop": 16,
+      "tmu": 24,
+      "unified_shader": 384.0,
+      "vertex_shader": NaN
+    },
+    ...
+  ]
+}
+```
 
+### POST `/gpu_info_post`
+Route to send data using POST method. The data is saved in the specs table and in the benchmarks table.
+
+### Example
+#### Request
+```
+POST /gpu_info_post
+
+
+
+body:
+{
+  "manufacturer": "string",
+  "gpuName": "string",
+  "releaseYear": int,
+  "memSize": int,
+  "memBusWidth": int,
+  "gpuClock": int,
+  "memClock": int,
+  "unifiedShader": int,
+  "tmu": int,
+  "rop": int,
+  "pixelShader": "",
+  "vertexShader": "",
+  "ipg": "string",
+  "bus": "string",
+  "memType": "string",
+  "gpuChip": "string",
+  "averageScore": int,
+  "price": int
+}
+
+```
+#### Response
+```
+if everything goes well:
+{
+  "Messege": "GPU added"
+}
+
+else:
+error {error}
+```
+
+### DELETE `/gpu_delete/{gpu_name}`
+This route uses DELETE method to delete all data from the specified gpu.
+### Parameters
+`gpu_name`: name of the gpu from which you want to remove.
+
+### Example
+#### Request
+```
+DELETE /gpu_delete/{gtx 1060}
+
+```
+#### Response
+```
+if everything goes well:
+{
+    'Messege':'GPU delete'
+}
+
+else:
+error {error}
+```
+
+### PUT `/gpu_update/{gpu_name}`
+This route uses PUT method to update the data from the specified gpu.
+### Parameters
+`gpu_name`: name of the gpu from which you want to update.
+
+### Example
+#### Request
+```
+PUT /gpu_update/{gtx 1060}
+
+
+body:
+{
+  "manufacturer": "string",
+  "gpuName": "string",
+  "releaseYear": int,
+  "memSize": int,
+  "memBusWidth": int,
+  "gpuClock": int,
+  "memClock": int,
+  "unifiedShader": int,
+  "tmu": int,
+  "rop": int,
+  "pixelShader": "",
+  "vertexShader": "",
+  "ipg": "string",
+  "bus": "string",
+  "memType": "string",
+  "gpuChip": "string",
+  "averageScore": int,
+  "price": int
+}
+```
+#### Response
+```
+if everything goes well:
+{
+    'Messege':'GPU update'
+}
+
+else:
+error {error}
+```
 
 #### Errors
 This API uses the following error codes:
