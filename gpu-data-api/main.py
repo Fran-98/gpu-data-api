@@ -7,13 +7,8 @@ from sqlalchemy.orm import sessionmaker
 import pandas as pd
 
 
-
-
 app = Flask(__name__)
 
-def run():
-    app.run()
-    pass
 
 @app.route('/')
 def buenas():
